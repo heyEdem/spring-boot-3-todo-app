@@ -9,7 +9,7 @@ import java.time.Instant;
 @Setter
 @Entity
 @Table(name = "todo_item")
-public class TodoItem implements Serializable  {
+public class Todo implements Serializable  {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
 
@@ -26,7 +26,7 @@ public class TodoItem implements Serializable  {
 
     @Override
     public String toString( ){
-        return String.format("TodoItem{id=%d, description='%s',isComplete='%s', createdAt='%s' , updatedAt='%s'}",
+        return String.format("Todo{id=%d, description='%s',isComplete='%s', createdAt='%s' , updatedAt='%s'}",
                 id,description,isComplete,createdAt,updatedAt);
 
     }
